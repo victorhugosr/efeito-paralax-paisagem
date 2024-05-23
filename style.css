@@ -1,0 +1,233 @@
+:root {
+    --cor-ardosia-50: #f8fafc;
+    --cor-verde-escuro: #00200D;
+
+    --cor-verde-300: #86EFAC;
+    --cor-verde-700: #15803D;
+    --cor-verde-950: #052E16;
+    --cor-verde-500: #84CC16;
+    --cor-verde-gradiente: linear-gradient(180deg, var(--cor-verde-300) 0%, var(--cor-ardosia-50)100%);
+
+    --cor-verde-shadow: rgba(5, 46, 22, 0.25);;
+    --cor-verde-shadow-drop-menu: rgba(5, 46, 22, 0.1);
+    --cor-verde-btn-drop-menu: rgba(21, 128, 60, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.destaque {
+    color: var(--cor-verde-500);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 0 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--cor-verde-700);
+    padding-right: 4rem;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 7rem;
+    transition: 0.3s;
+    color: var(--cor-verde-700);
+}
+
+header nav a.ativar {
+    background: var(--cor-verde-700);
+    color: var(--cor-ardosia-50);
+    text-shadow: 
+    -0px -0px 15px var(--cor-verde-shadow),
+    -0px -0px 15px var(--cor-verde-shadow),
+    -0px -0px 15px var(--cor-verde-shadow),
+    -0px -0px 15px var(--cor-verde-shadow);
+}
+
+header nav a:hover {
+    background: var(--cor-verde-700);
+    color: var(--cor-ardosia-50);
+}
+
+header nav:hover > a:not(:hover) {
+    background: none;
+}
+
+header .toggle_btn {
+    color: #00200D;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.inicio {
+    display: flex;
+    height: 100dvh;
+    background: var(--cor-verde-gradiente);
+    position: relative;
+    overflow: hidden;
+}
+
+.inicio img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.espelho {
+    margin-bottom: -10px;
+    width: 100%;
+    background: var(--cor-verde-950);
+}
+
+.inicio .titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor-verde-500);
+    font-size: 9rem;
+    text-shadow: var(--cor-verde-shadow);
+}
+
+.sobre .sobre-container,
+.servicos .servicos-container,
+.contato .contato-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.sobre,
+.servicos,
+.contato{
+    text-align: justify;
+    padding: 50px;
+    background: var(--cor-verde-950);
+    color: var(--cor-ardosia-50);
+    position: relative;
+    z-index: 10;
+}
+
+.sobre h1,
+.servicos h1,
+.contato h1 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+    width: .7rem;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: grab;
+    background-color: var(--cor-verde-500);
+    border-radius: 1rem;
+    border: 3px solid var(--cor-verde-escuro);
+    animation: pisca 1.5s infinite;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--cor-verde-escuro);
+}
+
+/* Drop MENU*/
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+    width: 300px;
+    background: var(--cor-verde-shadow-drop-menu);
+    backdrop-filter: blur(15px);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu a {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 7rem;
+    transition: 0.3s;
+    color: var(--cor-verde-700);
+}
+
+.dropdown_menu a:hover {
+    background: var(--cor-verde-btn-drop-menu);
+    color: var(--cor-ardosia-50);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    header h1{
+        padding: 0;
+    }
+    header nav a {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+    .inicio .titulo{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .inicio .titulo{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .inicio .titulo{
+        font-size: 4rem;
+    }
+}
