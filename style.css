@@ -114,14 +114,14 @@ header .alternar_btn {
 }
 
 .sobre .sobre-container,
-.servicos .servicos-container,
+.artigos .artigos-container,
 .contato .contato-container {
     max-width: 1024px;
     margin: 0 auto;
 }
 
 .sobre,
-.servicos,
+.artigos,
 .contato{
     text-align: justify;
     padding: 50px;
@@ -132,10 +132,157 @@ header .alternar_btn {
 }
 
 .sobre h1,
-.servicos h1,
+.artigos h1,
 .contato h1 {
     font-size: 2.5rem;
     padding-bottom: 3rem;
+}
+
+.sobre-container p {
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.artigo-card {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #caeed7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px var(--cor-verde-shadow);
+}
+
+.artigo-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.artigo-info {
+    padding: 20px;
+    
+}
+
+.artigo-info h2 a {
+    text-decoration: none;
+    color: var(--cor-verde-700);
+    font-size: 1.5rem;
+}
+
+.artigo-info h2 a:hover {
+    color: var(--cor-verde-500);
+}
+
+.artigo-info p {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--cor-verde-950);
+}
+
+.contato {
+    padding: 50px;
+    background: var(--cor-verde-950);
+    color: var(--cor-ardosia-50);
+    position: relative;
+    z-index: 10;
+}
+
+.contato h1 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+    color: var(--cor-verde-500);
+}
+
+.contato p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.formulario-contato {
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc71;
+    border-radius: 5px;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: var(--cor-verde-500);
+    color: var(--cor-ardosia-50);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-verde-700);
+}
+
+.rodape {
+    background-color: var(--cor-verde-700);
+    color: var(--cor-ardosia-50);
+    padding: 40px 0;
+}
+
+.rodape-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+}
+
+.icone-rede-social {
+    color: var(--cor-ardosia-50);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    margin-bottom: 10px; /* Adicionado */
+    transition: color 0.3s ease;
+}
+
+.icone-rede-social:last-child {
+    margin-right: 0;
+}
+
+.icone-rede-social:hover {
+    color: var(--cor-verde-500);
+}
+
+.informacoes-contato p {
+    margin: 5px 0;
+    font-size: 1.1rem;
 }
 
 /* BARRA DE ROLAGEM */
@@ -221,6 +368,16 @@ header .alternar_btn {
 @media (max-width: 850px) {
     .inicio .titulo{
         font-size: 7rem;
+    }
+
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        margin-bottom: 20px;
     }
 }
 
