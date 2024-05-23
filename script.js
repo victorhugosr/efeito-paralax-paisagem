@@ -43,15 +43,15 @@ links.forEach(link => {
     });
 });
 
-const toggleBtn = document.querySelector('.toggle_btn');
-const toggleBtnIcon = document.querySelector('.toggle_btn i');
-const dropDownMenu = document.querySelector('.dropdown_menu');
+const alternarBtn = document.querySelector('.alternar_btn');
+const alternarBtnIcon = document.querySelector('.alternar_btn i');
+const menuSuspenso = document.querySelector('.menu_suspenso');
 
-toggleBtn.onclick = function() {
-    dropDownMenu.classList.toggle('open')
-    const isOpen = dropDownMenu.classList.contains('open');
+alternarBtn.onclick = function() {
+    menuSuspenso.classList.toggle('open')
+    const estaAberto = menuSuspenso.classList.contains('open');
 
-    toggleBtnIcon.classList = isOpen
+    alternarBtnIcon.classList = estaAberto
     ? 'fa-solid fa-xmark'
     : 'fa-solid fa-bars'
 }

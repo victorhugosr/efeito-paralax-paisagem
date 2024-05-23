@@ -75,7 +75,7 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
-header .toggle_btn {
+header .alternar_btn {
     color: #00200D;
     font-size: 1.5rem;
     cursor: pointer;
@@ -138,6 +138,8 @@ header .toggle_btn {
     padding-bottom: 3rem;
 }
 
+/* BARRA DE ROLAGEM */
+
 ::-webkit-scrollbar {
     width: .7rem;
 }
@@ -154,9 +156,9 @@ header .toggle_btn {
     background-color: var(--cor-verde-escuro);
 }
 
-/* Drop MENU*/
+/* MENU SUSPENSO */
 
-.dropdown_menu {
+.menu_suspenso {
     display: none;
     position: absolute;
     right: 2rem;
@@ -170,11 +172,11 @@ header .toggle_btn {
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.open {
+.menu_suspenso.open {
     height: 240px;
 }
 
-.dropdown_menu a {
+.menu_suspenso a {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -187,7 +189,7 @@ header .toggle_btn {
     color: var(--cor-verde-700);
 }
 
-.dropdown_menu a:hover {
+.menu_suspenso a:hover {
     background: var(--cor-verde-btn-drop-menu);
     color: var(--cor-ardosia-50);
 }
@@ -206,10 +208,10 @@ header .toggle_btn {
         justify-content: space-between;
     }
 
-    header .toggle_btn {
+    header .alternar_btn {
         display: block;
     }
-    .dropdown_menu {
+    .menu_suspenso {
         display: block;
     }
 }
@@ -227,7 +229,7 @@ header .toggle_btn {
         font-size: 5rem;
     }
 
-    .dropdown_menu {
+    .menu_suspenso {
         left: 2rem;
         width: unset;
     }
