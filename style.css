@@ -161,11 +161,13 @@ header .toggle_btn {
     position: absolute;
     right: 2rem;
     top: 5rem;
+    height: 0;
     width: 300px;
     background: var(--cor-verde-shadow-drop-menu);
     backdrop-filter: blur(15px);
     border-radius: 1.5rem;
     overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open {
@@ -220,9 +222,14 @@ header .toggle_btn {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
     .inicio .titulo{
         font-size: 5rem;
+    }
+
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
     }
 }
 
